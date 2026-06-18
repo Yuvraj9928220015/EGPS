@@ -1,0 +1,302 @@
+/* About.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.About-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(#000000bf, #000000bf),
+        url('https://thumbs.dreamstime.com/b/renewable-energy-farm-solar-panels-wind-turbines-under-blue-sky-high-resolution-photo-realistic-image-sustainable-386692382.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.About-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            #0000004d 0%,
+            #00000080 100%);
+    z-index: 1;
+}
+
+.About-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.About-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: #f97316;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.About-title {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-shadow: 2px 4px 12px #00000099;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.About-btn {
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #f97316;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.6s ease-out;
+}
+
+.About-btn:hover {
+    background-color: #16a34a;
+    transform: translateY(-3px);
+}
+
+.About-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .About-title {
+        font-size: 36px;
+    }
+
+    .About-subtitle {
+        font-size: 14px;
+    }
+
+    .About-btn {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .About-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .About-subtitle {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+
+    .About-btn {
+        padding: 12px 32px;
+        font-size: 15px;
+    }
+
+    .About-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-title {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 25px;
+    }
+
+    .About-title br {
+        display: none;
+    }
+
+    .About-subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+
+    .About-btn {
+        padding: 10px 28px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .About-title {
+        font-size: 24px;
+    }
+
+    .About-subtitle {
+        font-size: 11px;
+    }
+
+    .About-btn {
+        padding: 10px 24px;
+        font-size: 13px;
+    }
+}
+
+
+
+/* About-Box */
+.About-sec-container {
+    background-color: #0d1b2a;
+    padding: 40px 0px;
+    width: 100%;
+}
+
+.About-Box {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.About-Box-title {
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/* Solar-Panel */
+.Solar-Panel {
+    width: 100%;
+}
+
+.Solar-Panel-image {
+    width: 100%;
+}
+
+.Solar-Panel-image img {
+    width: 100%;
+}
+
+.Solar-Panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Solar-Panel-Subtitle {
+    font-size: 34px;
+    padding-bottom: 30px;
+    color: #fbbf24;
+}
+
+.Solar-Panel-title {
+    padding: 15px 0px;
+    line-height: 45px;
+    font-size: 28px;
+}
+
+.Solar-Panel-desc p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Milstone-section */
+.Reasons {
+    padding: 50px 0px;
+    background-color: #f3f3f3;
+}
+
+.Milstone-Header {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.Milstone-section img {
+    width: 100%;
+}
+
+.Reasons-Box {
+    width: 100%;
+    background-color: #2B9C00;
+    margin-top: 20px;
+    display: flex;
+    padding: 50px 20px;
+    border-radius: 8px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #0000003d 3px 8px;
+}
+
+.Reasons-Box-title {
+    font-size: 29px;
+    text-align: center;
+    color: white;
+}
+
+.Reasons-Box-des {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.process-subtitle {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.process-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-description {
+    width: 1000px;
+}

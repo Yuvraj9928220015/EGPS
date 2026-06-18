@@ -1,0 +1,222 @@
+/* Expert Section Styles */
+.expert-section {
+    padding: 80px 0;
+    background-color: #dfdfdf;
+}
+
+.expert-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.expert-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.expert-col {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Expert Box Base Styles */
+.expert-box {
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px #0000001a;
+}
+
+.expert-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px #00000026;
+}
+
+/* Content Box Styles */
+.content-box {
+    background-color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(46, 46, 46);
+}
+
+.expert-box .expert-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffd700;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.expert-box .expert-title {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #2c2c2c;
+}
+
+.expert-box .expert-description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #1b1b1be6
+}
+
+.expert-btn {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    background: #ffd700;
+}
+
+.expert-btn a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+
+.expert-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Image Box Styles */
+.image-box {
+    position: relative;
+    background: #333;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #000000cc, transparent);
+    padding: 30px 20px;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+}
+
+.image-box:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .expert-col {
+        width: 50%;
+    }
+
+    .expert-box {
+        height: 400px;
+    }
+
+    .expert-box .title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .expert-section {
+        padding: 50px 0;
+    }
+
+    .expert-col {
+        width: 100%;
+    }
+
+    .expert-box {
+        height: 450px;
+    }
+
+    .content-box {
+        padding: 35px 25px;
+    }
+
+    .expert-box .title {
+        font-size: 26px;
+    }
+
+    .expert-box .description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .expert-section {
+        padding: 40px 0;
+    }
+
+    .expert-container {
+        padding: 0 10px;
+    }
+
+    .expert-col {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .expert-box {
+        height: 380px;
+        border-radius: 15px;
+    }
+
+    .content-box {
+        padding: 30px 20px;
+    }
+
+    .expert-box .expert-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .expert-box .expert-subtitle {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .expert-box .expert-description {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .expert-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .image-overlay h3 {
+        font-size: 18px;
+    }
+}

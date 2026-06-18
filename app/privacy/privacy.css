@@ -1,0 +1,48 @@
+.Service-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(#00000080, #000000a2), url(https://egreenpwr.com/images/banner4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.Privacy-container {
+    padding: 60px 100px;
+    background-color: #ffffff;
+}
+
+.Service-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.Service-title {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: #dfdfdf;
+    text-shadow: 2px 4px 12px #00000099;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.Privacy-content p {
+    font-size: 20px;
+}
+
+.Privacy-content ul li {
+    font-size: 18px;
+    line-height: 36px;
+}

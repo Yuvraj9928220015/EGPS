@@ -1,0 +1,629 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Banner Styles */
+.Service-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(#000000bf, #000000bf),
+        url('https://egreenpwr.com/images/banner4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.Service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            #0000004d 0%,
+            #00000080 100%);
+    z-index: 1;
+}
+
+.Service-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.Service-subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.Service-title {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-shadow: 2px 4px 12px #00000099;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.Service-btn {
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.6s ease-out;
+    box-shadow: 0 4px 15px #fbbf2466;
+}
+
+.Service-btn:hover {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #16a34a66;
+}
+
+.Service-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+}
+
+.services-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.services-main-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.services-main-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #f97316, #fbbf24);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.services-description {
+    font-size: 19px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px #00000014;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px #f9731633;
+    border-color: #fbbf24;
+}
+
+.service-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-title {
+    font-size: 26px;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.service-description {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-features li {
+    font-size: 16px;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.service-features li:last-child {
+    border-bottom: none;
+}
+
+.service-card-btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.service-card-btn:hover {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+
+/* Large Tablets and Small Desktops (1024px and below) */
+@media (max-width: 1024px) {
+    .Service-title {
+        font-size: 48px;
+    }
+
+    .Service-subtitle {
+        font-size: 18px;
+    }
+
+    .services-main-title,
+    .benefits-title,
+    .process-title,
+    .cta-title {
+        font-size: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .step-number {
+        font-size: 40px;
+        min-width: 70px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .Service-container {
+        padding: 30px 15px;
+        background-attachment: scroll;
+        min-height: 90vh;
+    }
+
+    .Service-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .Service-subtitle {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+
+    .Service-btn {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+
+    .services-section,
+    .solar-benefits-section,
+    .process-section,
+    .stats-section {
+        padding: 60px 15px;
+    }
+
+    .cta-section {
+        padding: 70px 15px;
+    }
+
+    .services-main-title,
+    .benefits-title,
+    .process-title,
+    .cta-title {
+        font-size: 36px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .service-card {
+        padding: 35px 25px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    .process-step {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .step-number {
+        font-size: 36px;
+        min-width: auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cta-btn {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cta-note {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .Service-container {
+        padding: 20px 15px;
+        min-height: 85vh;
+    }
+
+    .Service-content {
+        padding: 15px 10px;
+    }
+
+    .Service-title {
+        font-size: 32px;
+        margin-bottom: 25px;
+        line-height: 1.3;
+    }
+
+    .Service-subtitle {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+
+    .Service-btn {
+        padding: 12px 32px;
+        font-size: 15px;
+    }
+
+    .services-section,
+    .solar-benefits-section,
+    .process-section,
+    .stats-section {
+        padding: 50px 15px;
+    }
+
+    .cta-section {
+        padding: 60px 15px;
+    }
+
+    .services-main-title,
+    .benefits-title,
+    .process-title,
+    .cta-title {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    .services-main-title::after {
+        width: 70px;
+        height: 3px;
+        margin-top: 15px;
+    }
+
+    .services-description,
+    .benefits-subtitle,
+    .process-subtitle,
+    .cta-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .service-icon {
+        font-size: 50px;
+    }
+
+    .service-title,
+    .benefit-item h3,
+    .step-content h3 {
+        font-size: 22px;
+    }
+
+    .service-description,
+    .benefit-item p,
+    .step-content p {
+        font-size: 15px;
+    }
+
+    .service-features li {
+        font-size: 15px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .benefit-item {
+        padding: 30px 20px;
+    }
+
+    .benefit-icon {
+        font-size: 50px;
+    }
+
+    .process-step {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .step-number {
+        font-size: 32px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-item {
+        padding: 25px 20px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        padding: 14px 32px;
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .cta-note {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
+/* Extra Small Mobile Devices (360px and below) */
+@media (max-width: 360px) {
+    .Service-container {
+        padding: 15px 10px;
+    }
+
+    .Service-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .Service-subtitle {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .Service-btn {
+        padding: 10px 28px;
+        font-size: 14px;
+    }
+
+    .services-section,
+    .solar-benefits-section,
+    .process-section,
+    .stats-section {
+        padding: 40px 10px;
+    }
+
+    .cta-section {
+        padding: 50px 10px;
+    }
+
+    .services-main-title,
+    .benefits-title,
+    .process-title,
+    .cta-title {
+        font-size: 24px;
+    }
+
+    .services-description,
+    .benefits-subtitle,
+    .process-subtitle,
+    .cta-description {
+        font-size: 14px;
+    }
+
+    .service-card,
+    .benefit-item {
+        padding: 25px 15px;
+    }
+
+    .service-icon,
+    .benefit-icon {
+        font-size: 45px;
+    }
+
+    .service-title,
+    .benefit-item h3,
+    .step-content h3 {
+        font-size: 20px;
+    }
+
+    .service-description,
+    .benefit-item p,
+    .step-content p {
+        font-size: 14px;
+    }
+
+    .service-features li {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .service-card-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .process-step {
+        padding: 18px 12px;
+    }
+
+    .step-number {
+        font-size: 28px;
+    }
+
+    .stat-item {
+        padding: 20px 15px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+
+    .cta-note {
+        font-size: 13px;
+    }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media (max-width: 320px) {
+    .Service-title {
+        font-size: 24px;
+    }
+
+    .Service-subtitle {
+        font-size: 11px;
+    }
+
+    .services-main-title,
+    .benefits-title,
+    .process-title,
+    .cta-title {
+        font-size: 22px;
+    }
+
+    .service-card,
+    .benefit-item {
+        padding: 20px 12px;
+    }
+
+    .service-icon,
+    .benefit-icon {
+        font-size: 40px;
+    }
+}
